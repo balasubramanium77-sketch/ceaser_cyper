@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CipherVault // Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <div class="header-title">
+                <h1>CIPHERVAULT <span>// SIMULATOR</span></h1>
+                <p>CAESAR CIPHER ENCRYPTION TOOL</p>
+            </div>
+            <div class="header-status">
+                <span class="status-indicator"></span> System Secure
+            </div>
+        </header>
+
+        <div class="main-grid">
+            <div class="column">
+                <div class="mode-toggle">
+                    <button id="encryptModeBtn" class="active">ENCRYPTION MODE</button>
+                    <button id="decryptModeBtn">DECRYPTION MODE</button>
+                </div>
+
+                <div class="panel">
+                    <h2>INPUT <span id="inputLabel">PLAIN TEXT</span></h2>
+                    <textarea id="inputText" placeholder="Enter your text here...">jk oa pcog ku pktcp</textarea>
+                    
+                    <div class="controls">
+                        <label for="shiftKey">SHIFT KEY: <span id="shiftValue">8</span></label>
+                        <input type="range" id="shiftKey" min="0" max="25" value="8">
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h2>OUTPUT <span id="outputLabel">CIPHERTEXT</span></h2>
+                    <textarea id="outputText" readonly></textarea>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="panel stats-panel">
+                    <h2>REAL-TIME STATS</h2>
+                    <div class="stat-row"><span>Total Characters</span> <span id="statTotal">0</span></div>
+                    <div class="stat-row"><span>Letters</span> <span id="statLetters">0</span></div>
+                    <div class="stat-row"><span>Spaces</span> <span id="statSpaces">0</span></div>
+                    <div class="stat-row"><span>Symbols</span> <span id="statSymbols">0</span></div>
+                </div>
+
+                <div class="panel table-panel">
+                    <h2>CHARACTER TRANSFORMATION</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Index</th>
+                                    <th>Original</th>
+                                    <th>ASCII (ord)</th>
+                                    <th>Shift</th>
+                                    <th>New ASCII</th>
+                                    <th>Result</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transformationTableBody">
+                                </tbody>
+                        </table>
+                    </div>
+                    <p class="table-note">* Showing first 10 characters only</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
