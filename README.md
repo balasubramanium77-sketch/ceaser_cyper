@@ -22,13 +22,7 @@ https://balasubramanium77-sketch.github.io/ceaser_cyper/
 
 ---
 
-# 📸 Preview
 
-> *(Add your project screenshot here)*
-
-```md
-![Ceasercipher Preview](assets/screenshot.png)
-```
 
 ---
 
