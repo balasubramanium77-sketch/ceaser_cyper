@@ -1,132 +1,142 @@
-# 🔐 CipherVault
+# 🔐 Ceaser_cipher
 
-CipherVault is a modern **Caesar Cipher Encryption Console** built using **HTML, CSS, and JavaScript**. It demonstrates the complete Caesar Cipher algorithm through an interactive cyber-themed interface while visualizing the encryption process using **ASCII conversion**, **modular arithmetic**, and the **Input-Process-Output (IPO)** cycle. Designed for students, cybersecurity enthusiasts, and beginners in cryptography, CipherVault makes classical encryption easy to learn and understand.
+**Ceasercipher** is an interactive web application that demonstrates the **Caesar Cipher** encryption technique through a modern cyber-themed interface. Built with **HTML, CSS, and JavaScript**, it provides a hands-on way to explore how classical cryptography transforms plain text into encrypted messages using a configurable shift value.
+
+Whether you're beginning your cybersecurity journey or studying cryptography, Ceasercipher offers an easy-to-follow visualization of each stage of the encryption and decryption process.
 
 🌐 **Live Demo:**  
 https://balasubramanium77-sketch.github.io/ceaser_cyper/
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-- 🔒 Caesar Cipher Encryption & Decryption
-- ⚡ Real-time encryption and decryption
-- 🧮 Interactive algorithm visualization
-- 🔢 ASCII value conversion
-- ♻️ Modular arithmetic (Modulo 26)
-- 📊 Input-Process-Output (IPO) flow explanation
-- 🖥️ Cyber-themed responsive user interface
-- 📱 Fully responsive across desktop, tablet, and mobile devices
+- 🔒 Encrypt and decrypt text using the Caesar Cipher algorithm
+- ⚡ Instant output as you type
+- 📊 Step-by-step visualization of the encryption process
+- 🔢 Displays ASCII values and character transformations
+- 🧮 Demonstrates modular arithmetic used in cryptography
+- 🎨 Cyber-inspired, responsive user interface
+- 📱 Works smoothly across desktop, tablet, and mobile devices
+- 🚀 Lightweight application with no external libraries
 
 ---
 
-## 🧠 How It Works
+# 📸 Preview
 
-CipherVault encrypts each alphabetic character by shifting it according to a user-defined key while leaving numbers, spaces, and special characters unchanged.
+> *(Add your project screenshot here)*
 
-### Encryption Process
+```md
+![Ceasercipher Preview](assets/screenshot.png)
+```
+
+---
+
+# ⚙️ Encryption Workflow
+
+Ceasercipher follows a simple sequence to encrypt text:
 
 ```text
 Plain Text
     │
     ▼
-Read Each Character
+Read Individual Characters
     │
     ▼
-Convert to ASCII
+Convert to ASCII Value
     │
     ▼
-Find Alphabet Position
+Find Alphabet Index
     │
     ▼
-Apply Shift Key
+Apply Shift Value
     │
     ▼
-Modulo 26 Operation
+Wrap Using Modulo (26)
     │
     ▼
-Convert Back to Character
+Generate Encrypted Character
     │
     ▼
-Encrypted Text
+Cipher Text
 ```
 
-### Decryption Process
+---
+
+# 🔓 Decryption Workflow
+
+To restore the original message, the reverse operation is performed.
 
 ```text
 Cipher Text
     │
     ▼
-Read Each Character
+Read Individual Characters
     │
     ▼
-Convert to ASCII
+Convert to ASCII Value
     │
     ▼
-Subtract Shift Key
+Reverse the Shift
     │
     ▼
-Modulo 26 Operation
+Apply Modulo (26)
     │
     ▼
-Convert Back to Character
+Convert Back to Letters
     │
     ▼
-Original Plain Text
+Original Message
 ```
 
 ---
 
-## 🧮 Mathematical Logic
+# 🧠 Algorithm Overview
 
-### Encryption
+### Encryption Formula
 
 ```text
-Encrypted = (Position + Shift) % 26
+Cipher = (Letter Position + Shift Key) mod 26
 ```
 
-### Decryption
+### Decryption Formula
 
 ```text
-Original = (Position - Shift + 26) % 26
+Plain = (Letter Position − Shift Key + 26) mod 26
 ```
 
-The project uses:
-
-- `charCodeAt()` for ASCII conversion
-- `String.fromCharCode()` to convert ASCII back to characters
-- `% 26` for alphabet wrapping
+The application uses JavaScript's built-in character conversion methods to perform these operations efficiently.
 
 ---
 
-## ✅ Supported Inputs
+# ✅ Supported Inputs
 
-CipherVault correctly handles:
+Ceasercipher processes a variety of input types correctly:
 
-- ✅ Uppercase letters (A–Z)
-- ✅ Lowercase letters (a–z)
-- ✅ Numbers (0–9)
-- ✅ Spaces
-- ✅ Symbols
-- ✅ Special characters
-- ✅ Shift values from 0–25
+- ✔ Uppercase letters
+- ✔ Lowercase letters
+- ✔ Spaces
+- ✔ Numbers
+- ✔ Symbols
+- ✔ Special characters
+- ✔ Shift values from **0 to 25**
 
-> Only alphabetic characters are encrypted. All other characters remain unchanged.
-
----
-
-## 🛠️ Technologies Used
-
-- **HTML5**
-- **CSS3**
-- **JavaScript (ES6)**
+> Only alphabetical characters are transformed during encryption. All other characters remain unchanged.
 
 ---
 
-## 📂 Project Structure
+# 🛠️ Technologies Used
+
+- **HTML5** – Page structure
+- **CSS3** – Styling and responsive layout
+- **JavaScript (ES6)** – Encryption, decryption, and application logic
+
+---
+
+# 📂 Project Structure
 
 ```text
-CipherVault/
+Ceasercipher/
 │── index.html
 │── style.css
 │── script.js
@@ -137,37 +147,29 @@ CipherVault/
 
 ---
 
-## 🚀 How to Use
+# 🚀 Getting Started
 
-1. Open the live demo.
-2. Enter your plain text.
-3. Choose a shift value (0–25).
-4. Click **Encrypt** or **Decrypt**.
-5. View the transformed text along with the algorithm visualization.
-
----
-
-# 📸 Preview
-
-<p align="center">
-  <img src="assets/screenshot.png" alt="CipherVault Preview" width="1000">
-</p>
+1. Clone or download the repository.
+2. Open **index.html** in your preferred web browser.
+3. Enter your message.
+4. Choose a shift key.
+5. Encrypt or decrypt the text instantly.
 
 ---
 
-## 🌟 Future Enhancements
+# 💡 Future Improvements
 
 - Multiple classical cipher algorithms
-- Copy encrypted/decrypted text
-- File encryption support
-- Dark/Light mode toggle
+- Copy encrypted text with one click
+- Dark/Light theme switch
 - Encryption history
+- Export encrypted messages
 - Animated algorithm visualization
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 **Bala Subramanium**
 
-⭐ If you found this project useful, consider giving it a **Star** on GitHub!
+If you enjoyed this project, consider giving the repository a ⭐ on GitHub.
